@@ -33,8 +33,11 @@ function CurrencyList() {
     setMid(mid);
   };
 
+  let [result, setResult] = useState(0);
+
   const checkNumber = () => {
-    return number * mid;
+    result = number * mid;
+    setResult(result);
   };
 
   useEffect(() => {
@@ -43,10 +46,10 @@ function CurrencyList() {
 
   return (
     <div className="row">
-      <div className="col">
+      <div className="col-6">
         <input onChange={getNumber} type="number" />
       </div>
-      <div className="col">
+      <div className="col-2">
         <select onChange={getName}>
           {currencyList.map((currencyList) => (
             <option key={currencyList.mid} value={currencyList.mid}>
@@ -55,8 +58,13 @@ function CurrencyList() {
           ))}
         </select>
       </div>
-      <div className="col">
-        <div>{checkNumber()}</div>
+      <div className="col-2">
+        <button className="btn btn-primary" onClick={checkNumber}>
+          PRZELICZ
+        </button>
+      </div>
+      <div className="col-2">
+        <div>{result}</div>
       </div>
     </div>
   );
