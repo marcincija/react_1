@@ -45,12 +45,12 @@ function CurrencyList() {
   }, []);
 
   return (
-    <div className="row">
-      <div className="col-6">
-        <input onChange={getNumber} type="number" />
+    <div className="row align-items-center ">
+      <div className="col">
+        <input onChange={getNumber} type="number" className="form-control" />
       </div>
-      <div className="col-2">
-        <select onChange={getName}>
+      <div className="col">
+        <select onChange={getName} className="form-select">
           <option value="0">Wybierz walutę</option>
           {currencyList.map((currencyList) => (
             <option key={currencyList.mid} value={currencyList.mid}>
@@ -59,13 +59,13 @@ function CurrencyList() {
           ))}
         </select>
       </div>
-      <div className="col-2">
+      <div className="col">
         <button className="btn btn-primary" onClick={checkNumber}>
           PRZELICZ
         </button>
       </div>
-      <div className="col-2">
-        <div>{result}</div>
+      <div className="col">
+        <div className="text-center fs-4">{result}</div>
       </div>
     </div>
   );
