@@ -1,5 +1,5 @@
 import "../styles/App.css";
-import CurrencyList from "../components/Button/CurrencyList";
+import Convertcurrency from "../components/Convertcurrency/Convertcurrency";
 
 import React from "react";
 
@@ -16,7 +16,7 @@ function App() {
               Przelicznik walut
             </div>
           </div>
-          <CurrencyList />
+          <Convertcurrency />
         </div>
       </header>
     </div>

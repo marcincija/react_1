@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
-function CurrencyList() {
+function Convertcurrency() {
   const [currencyList, setList] = useState([]);
 
   const fetchList = async () => {
@@ -59,16 +59,16 @@ function CurrencyList() {
           ))}
         </select>
       </div>
-      <div className="col">
+      <div className="col-sm-12 col-md-3">
         <button className="btn btn-primary" onClick={checkNumber}>
           PRZELICZ
         </button>
       </div>
-      <div className="col">
+      <div className="col-sm-12 col-md-3">
         <div className="text-center fs-4">{result}</div>
       </div>
     </div>
   );
 }
 
-export default CurrencyList;
+export default Convertcurrency;
