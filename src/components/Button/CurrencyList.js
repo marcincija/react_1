@@ -51,6 +51,7 @@ function CurrencyList() {
       </div>
       <div className="col-2">
         <select onChange={getName}>
+          <option value="0">Wybierz walutę</option>
           {currencyList.map((currencyList) => (
             <option key={currencyList.mid} value={currencyList.mid}>
               {currencyList.code}
